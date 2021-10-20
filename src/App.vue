@@ -1,12 +1,31 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
-  <router-view/>
+  <div class="container">
+    <todo-list></todo-list>
+    <todo-form></todo-form>
+  </div>
 </template>
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import TodoList from './components/TodoList.vue'
+import TodoForm from './components/TodoForm.vue'
+
+@Options({
+  components: {
+    TodoList,
+    TodoForm,
+  },
+})
+export default class App extends Vue {}
+</script>
+
 
 <style lang="scss">
+body{
+  margin: 0;
+}
+.container{
+  background-color: #e9eef3;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
