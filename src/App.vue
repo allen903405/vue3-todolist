@@ -1,18 +1,18 @@
 <template>
   <div class="container">
     <todo-list></todo-list>
-    <todo-form></todo-form>
+    <!-- <todo-form></todo-form> -->
   </div>
 </template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import TodoList from './components/TodoList.vue'
-import TodoForm from './components/TodoForm.vue'
+// import TodoForm from './components/TodoForm.vue'
 
 @Options({
   components: {
     TodoList,
-    TodoForm,
+    // TodoForm,
   },
 })
 export default class App extends Vue {}
